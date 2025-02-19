@@ -1,0 +1,104 @@
+.information{
+    color: #726277;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 70px;
+    width: 40%;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-weight: bolder;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+}
+
+div.container{
+    width: 60%;
+    height: fit-content;
+    min-height: 83vh;
+    background: url(../../assets/images/background-registrate.png);
+    position: relative !important;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-bottom: 30px;
+}
+
+ol li a{
+    color: #A08FA6;
+    font-size: 17px;
+    font-family: raleway;
+    padding: 5px 25.7px !important;
+    text-decoration: none;
+}
+
+ol li a:hover, .active{
+    background-color: #eae5eb !important;
+}
+
+nav{
+    margin: 20px;
+    padding: 22px;
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+app-registration-form, app-log-in{
+    display: inline-block;
+    width: 70%
+}
+
+@media screen and (max-width:988px) and ( min-width:575px){
+    .information{
+        padding: 15px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    ol li a{
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+    div.container, .information{
+        width: 100%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+    }
+}
+
+@media screen and (max-width:430px) {
+
+    h1{
+        font-size: 35px;
+    }
+
+    .information{
+        padding: 15px;
+    }
+
+    ol li a{
+        font-size: 13px;
+    }
+    
+    nav{
+        margin: 10px;
+        padding: 12px;
+    }
+}

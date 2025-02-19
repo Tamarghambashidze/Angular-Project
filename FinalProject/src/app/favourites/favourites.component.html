@@ -1,0 +1,27 @@
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Favourites</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="cards">
+        <div *ngFor="let item of newMenu, let i = index" class="card" style="width: 18rem;">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div style="position: relative;" class="card-body">
+              <h5 class="card-title">
+                {{item.name}}
+              </h5>
+              <div class="box">
+                <app-stars-rating [rating]="item.rating"></app-stars-rating>  
+                <div class="box-column">         
+                  <button routerLink="/eat/{{item.name}}/{{item.id}}">See Recipe</button>
+                  <button (click)="onRemove(i)">Remove</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

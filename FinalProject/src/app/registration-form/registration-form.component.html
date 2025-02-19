@@ -1,0 +1,60 @@
+<section>
+    <h2>Registration</h2>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">First Name*</label>
+          <input 
+          name="firstName" 
+          type="text" 
+          class="form-control" 
+          id="exampleInputFirstName1" 
+          [value]="" 
+          ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Last Name*</label>
+          <input 
+          name="lastName"
+          type="text" 
+          class="form-control" 
+          id="exampleInputLastName1" 
+          [value]="" 
+          ngModel required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email*</label>
+            <input 
+            name="email" 
+            type="email" 
+            class="form-control" 
+            id="exampleInputEmail1" 
+            [value]="" 
+            ngModel required email>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phone</label>
+            <input 
+            pattern="[0-9]{9}" 
+            name="phone" 
+            type="number" 
+            class="form-control" 
+            id="examplePhone1" 
+            [value]="" 
+            ngModel required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Password</label>
+            <input 
+            minlength="8" 
+            maxlength="30" 
+            name="password" 
+            type="password" 
+            class="form-control" 
+            id="examplePassword1" 
+            [value]="" 
+            autocomplete="cc-csc"
+            ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Register Now</button>
+    </form>
+</section>

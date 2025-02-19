@@ -1,0 +1,50 @@
+h1{
+    font-size: 52px;
+    font-family: raleway;
+    font-weight: bolder;
+    color: #FFF;
+    width: fit-content;
+    padding: 10px;
+}
+
+div.heading{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+svg{
+    width: 112px; 
+    height:112px; 
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 30px;
+        margin: 0;
+    }
+    div.heading{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    svg{
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1{
+        font-size: 20px;
+    }
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+}

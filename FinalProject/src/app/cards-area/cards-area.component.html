@@ -1,0 +1,23 @@
+<section>
+    <div class="buttons">
+        <button *ngFor="let button of buttonsList" (click)="onBtnClick(button.name)" (dblclick)="onBtnDoubleClick()">
+            <img [src]="button.imgUrl" alt="">
+            <span>{{button.name}}</span>
+        </button>
+    </div>
+    <div class="cards">
+        <div class="card" *ngFor="let card of filteredCardsList">
+            <img style="width: 100%; " [src]="card.imgUrl" alt="">
+            <div class="card-container">
+                <img [src]="card.typeImgUrl" alt="">
+                <div class="text">
+                    <h3>{{card.title}}</h3>
+                    <div>
+                        <h4>{{card.location}}</h4> 
+                        <button routerLink="/home/{{card.title}}">See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

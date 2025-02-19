@@ -1,0 +1,33 @@
+<main>
+    <div class="headings">
+        <h1>{{card.title}}</h1>
+        <h2>{{card.location}}</h2>
+        <hr>
+    </div>
+    <section>
+        <div class="column1">
+            <img [src]="card.imgUrl" alt="">
+            <div>
+                <h2  style="margin: 0;">Description</h2>
+                <p>{{card.descpription}}</p>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="logos">
+                <img src="https://static.wixstatic.com/media/3963cf22f5e14a25a77ebe37298a8d3b.png/v1/fill/w_80,h_80,al_c,q_85,enc_auto/3963cf22f5e14a25a77ebe37298a8d3b.png" alt="">
+                <img src="https://static.wixstatic.com/media/a828568f6b7d48b3b874b5114f521d6e.png/v1/fill/w_80,h_80,al_c,q_85,enc_auto/a828568f6b7d48b3b874b5114f521d6e.png" alt="">
+                <img src="https://static.wixstatic.com/media/c01f34f8035346eb80bb2b29ab7dc702.png/v1/fill/w_80,h_80,al_c,q_85,enc_auto/c01f34f8035346eb80bb2b29ab7dc702.png" alt="">
+            </div>
+            <img [src]="card.mapImg" alt="">
+            <hr>
+            <div class="price">
+                <p>${{card.price}}</p>
+                <div>
+                    <h5>{{card.days}}</h5>
+                    <h6>days</h6>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+</main>

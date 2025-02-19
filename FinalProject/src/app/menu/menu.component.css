@@ -1,0 +1,100 @@
+.cards{
+    display: flex;
+    justify-content: start; 
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h2{
+    font-family: raleway;
+    color: #726477;
+    font-size: 30px;
+}
+
+.card{
+    color: #726277;
+}
+
+.card button{
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    background-color: #726277;
+    border: none;
+    width: fit-content;
+}
+
+.card button:hover{
+    filter: brightness(170%);
+}
+
+h5{
+    font-size: 18px;
+    font-family: raleway;
+}
+
+select{
+    width: fit-content;
+    border: none;
+    display: inline-block;
+}
+
+.select{
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.box-column2 h5, h6{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    text-align: center;
+}
+
+.box-column2{
+    width: fit-content;
+    background-color: #dfd8e1;
+    padding: 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+svg{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.red{
+    fill: red;
+}
+
+@media screen and (max-width:635px) {
+    .card{
+        width: 48% !important;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .card{
+        max-width: 390px !important;
+        width: 90% !important;
+    }
+
+    .cards{
+        justify-content: center !important;
+    }
+}

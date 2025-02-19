@@ -1,0 +1,41 @@
+<section>
+    <h2>FOOD RECIPES</h2>
+    <div class="select">
+        <label for="sortby">Sort By:</label>
+        <select (change)="sortBy($event)" class="form-select" aria-label="Default select example">
+            <option selected>Recommended</option>
+            <option value="rating">Rating</option>
+            <option value="cooking-time-low-high">Cooking Time(low to high)</option>
+            <option value="cooking-time-high-low">Cooking Time(high to low)</option>
+            <option value="name-a-z">Name (A-Z)</option>
+            <option value="name-z-a">Name (Z-A)</option>
+        </select>
+    </div>
+    <div class="cards">
+        <div *ngFor="let item of menu" class="card" style="width: 18rem;">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div style="position: relative;" class="card-body">
+              <h5 class="card-title">
+                {{item.name}}
+              </h5>
+              <a  (click)="onClickToggle(item.id)">
+                <svg [ngClass]="{'red': !isRed(item.id)}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </a>
+              <div class="box">
+                <div class="box-column1">
+                    <app-stars-rating [rating]="item.rating"></app-stars-rating>           
+                    <button routerLink="/eat/{{item.name}}/{{item.id}}">See Recipe</button>
+                </div>
+                <div class="box-column2">
+                    <h5>{{item.prepTimeMinutes + item.cookTimeMinutes}}</h5>
+                    <h6>Minutes</h6>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-favourites [numbers]="idArr" [booleans]="booleanArr"></app-favourites>

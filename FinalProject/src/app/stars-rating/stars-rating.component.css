@@ -1,0 +1,8 @@
+.star-rating {
+    color: #FFD700;
+}
+  
+.fa-star,.fa-star-half,.fa-star-o {
+    font-size: 24px;
+    margin-right: 2px;
+}

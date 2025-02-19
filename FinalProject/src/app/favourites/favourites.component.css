@@ -1,0 +1,39 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card{
+    color: #726277;
+}
+
+.card button{
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    background-color: #726277;
+    border: none;
+    width: fit-content;
+}
+
+.card button:hover{
+    filter: brightness(170%);
+}
+
+h5{
+    font-size: 18px;
+    font-family: raleway;
+}
+
+.card-body{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.box-column{
+    display: flex;
+    justify-content: space-between;
+}
